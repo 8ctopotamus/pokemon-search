@@ -25,7 +25,8 @@ function searchPokemon(event) {
       var h2 = document.createElement('h2')
       var img = document.createElement('img')
       var abilitiesList = document.createElement('ul')
-      
+      var button = document.createElement('button')
+
       // modify elements
       cardDiv.classList.add('card')
       cardDiv.classList.add('mb-3')
@@ -35,6 +36,7 @@ function searchPokemon(event) {
       img.src = pokemon.sprites.front_default
       img.alt = pokemon.name
       img.classList.add('card-img-top')
+      button.innerText = "X"
       
       // abilities
       for (var i = 0; i < pokemon.abilities.length; i++) {
@@ -47,6 +49,7 @@ function searchPokemon(event) {
       cardBody.append(img)
       cardBody.append(h2)
       cardBody.append(abilitiesList)
+      cardBody.append(button)
       cardDiv.append(cardBody)
       resultsEl.append(cardDiv)
 

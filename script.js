@@ -37,6 +37,8 @@ function searchPokemon(event) {
       img.alt = pokemon.name
       img.classList.add('card-img-top')
       button.innerText = "X"
+      button.classList.add('btn')
+      button.classList.add('btn-danger')
       
       // abilities
       for (var i = 0; i < pokemon.abilities.length; i++) {
